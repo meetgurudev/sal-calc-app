@@ -67,8 +67,8 @@ const useTailwind = fs.existsSync(
 const swSrc = paths.swSrc;
 
 // style files regexes
-const cssRegex = /\.css$/;
-const cssModuleRegex = /\.module\.css$/;
+const cssRegex = /\.css$/; // file.css
+const cssModuleRegex = /\.module\.css$/; // file.module.css
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
@@ -489,7 +489,7 @@ module.exports = function (webpackEnv) {
             // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
             // using the extension .module.css
             {
-              test: cssModuleRegex,
+              test: cssRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
                 sourceMap: isEnvProduction

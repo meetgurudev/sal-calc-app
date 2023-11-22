@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import classes from "footer.css";
+import "./footer.css"
 
 
 const footer = (props) => {
 
     return (
-        <div>
+        <h1 className="footerMain">
             SOme JSZ
-        </div>
+        </h1>
     )
 }
 
